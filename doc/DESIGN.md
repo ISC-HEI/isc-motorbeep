@@ -202,8 +202,11 @@ the DOIT board already gets right; it is kept.)
 Stated as checks, not as facts:
 - **STSPIN220 `REF` -> phase-current gain**, and the `TOFF` resistor value for
   the chosen off-time. The divider and Rsense above are a starting point.
-- **TPS63001 output current at Vin = 2.8 V.** The ESP32 needs ~500 mA peaks on
-  WiFi TX; confirm the buck-boost still delivers that from a nearly-flat pack.
+- **TPS63001 output current at Vin = 2.8 V.** The ESP32-WROOM-32E datasheet
+  (Table 14, Recommended Operating Conditions) requires the external supply to
+  deliver **0.5 A minimum** — this is a specified requirement, not an estimate.
+  Confirm the buck-boost still delivers 0.5 A at 3.3 V from a nearly-flat pack;
+  its 1.7 A switch rating suggests yes, but the low-Vin curve is the check.
 - **Reverse-polarity FET.** At 3xAA the worst-case gate drive is Vgs = -2.8 V
   (against -2.0 V with 2 cells), comfortably inside the DMG2301L
   characterisation — the 3-cell change resolves what was a real concern at 2.

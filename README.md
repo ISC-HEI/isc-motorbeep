@@ -58,6 +58,9 @@ This is the decision everything else follows from. The pack delivers 2.8–4.8 V
 | MAX98357A (audio) | 2.5 – 5.5 V | `+BATT` **directly** |
 | ESP32-WROOM-32E | 3.0 – 3.6 V | `+3V3` via TPS63001 |
 
+Espressif's Table 14 also requires the supply to deliver **at least 0.5 A** — which is why the logic
+rail gets a switching converter and a 100 µF reservoir rather than anything smaller.
+
 So motors and audio need **no converter at all** — fewer parts, less EMI, and no conversion loss on
 the largest load. Only the logic rail needs one, and it must be a **buck-boost**: the pack starts at
 4.8 V (above 3.3) and ends at 2.8 V (below it), so an LDO would drop out and a plain boost could not
@@ -161,7 +164,8 @@ tools/kicad-mcp-server/.venv/bin/python tools/price_bom.py
 | `U5,U6` | STSPIN220 | QFN-16-1EP_3x3mm_P0.5mm_EP1.45x1.45mm_ThermalVias | [C2150516](https://jlcpcb.com/partdetail/2150516) | 2 | 1.5033 | **3.01** | 27 |
 | `U7` | MAX98357A | QFN-16-1EP_3x3mm_P0.5mm_EP1.45x1.45mm_ThermalVias | [C2682619](https://jlcpcb.com/partdetail/2682619) | 1 | 0.4995 | **0.50** | 16,467 |
 
-**Total: $14.49 in parts for one board**, at 1-off price breaks.
+**Total: $14.49 in parts for one board**, at 1-off price breaks and at the prices in the 14 Sep 2026
+snapshot. Prices and stock move — re-run `tools/price_bom.py` after refreshing the catalog.
 
 That is parts only — no PCB, no assembly, no shipping. If you use JLCPCB assembly, note that almost
 every part here is an *Extended* part, which carries a **$3 setup fee each**; for a one-off build
@@ -171,7 +175,8 @@ a prototype.
 ### Sourcing notes — read before ordering
 
 > [!WARNING]
-> **The STSPIN220 is nearly out of stock: 27 units at JLCPCB.** It is the part the whole low-voltage
+> **The STSPIN220 is nearly out of stock: 27 units at JLCPCB** *(catalog snapshot of 14 Sep 2026 —
+> check live before ordering)*. It is the part the whole low-voltage
 > architecture rests on, and it is the one thing here you cannot simply substitute — check
 > availability *before* committing to a build.
 
