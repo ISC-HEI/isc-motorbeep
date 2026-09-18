@@ -63,3 +63,36 @@ in [`KICAD9-PATCH.md`](./KICAD9-PATCH.md). Re-apply it after pulling the server 
 3. Snap origins with `place.py`, then `autoplace_schematic_fields` and `suggest_schematic_declutter`.
 4. `run_erc` on the **root**.
 5. Add the sheet's nets to `check_nets.py`, render it, and look at the PNG.
+
+## 3D rendering without root
+
+`kicad-cli pcb render` produces the views in `render/`. It needs the STEP models,
+which ship in `kicad-packages3d` — a root install. If you cannot use `sudo`, the
+models can go in your home directory instead, because KiCad resolves them through
+a variable the footprints already reference:
+
+```bash
+mkdir -p ~/.local/share/kicad-3dmodels && cd ~/.local/share/kicad-3dmodels
+curl -L -o pk3d.tar.gz \
+  "https://gitlab.com/kicad/libraries/kicad-packages3D/-/archive/9.0.9/kicad-packages3D-9.0.9.tar.gz"
+tar xzf pk3d.tar.gz            # 633 MB download, 3.2 GB extracted
+export KICAD9_3DMODEL_DIR=~/.local/share/kicad-3dmodels/kicad-packages3D-9.0.9
+```
+
+Then render, passing the same variable through to the tool:
+
+```bash
+kicad-cli pcb render --output out.png --width 1600 --height 1200 \
+  --quality high --perspective --floor --rotate "-30,0,25" --background opaque \
+  --define-var KICAD9_3DMODEL_DIR=$KICAD9_3DMODEL_DIR \
+  hardware/isc-motorbeep/isc-motorbeep.kicad_pcb
+```
+
+Note the GitLab archive contains **only `.step`** — the `.wrl` files are generated
+at packaging time and are absent. That is fine here: KiCad 9 footprints reference
+`.step` directly.
+
+Four footprints have no model in the library at all (the G-Switch USB-C, the two
+QFN sizes and the Texas VSON-10). `tools/fix_3d_models.py` repoints those at
+equivalent bodies **for rendering only** — same package and pin count, different
+exposed-pad size, which is hidden under the part. It touches nothing electrical.

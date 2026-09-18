@@ -3580,7 +3580,7 @@
 			(uuid "71fb3127-9ae3-4ec4-9e5b-c0ebc3c94629")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-16-1EP_3x3mm_P0.5mm_EP1.45x1.45mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-16-1EP_3x3mm_P0.5mm_EP1.7x1.7mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5438,7 +5438,7 @@
 			(uuid "28d2cc70-58c3-424c-be9d-c4cc7a98bc5d")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_G-Switch_GT-USB-7010ASV.step"
+		(model "${KICAD9_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -6036,7 +6036,7 @@
 			(uuid "aa83883d-638e-4af9-8167-3f99849c2ad4")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-24-1EP_4x4mm_P0.5mm_EP2.15x2.15mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7728,7 +7728,7 @@
 			(uuid "4449e875-1deb-441b-9dc1-ba4911f77cd3")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-16-1EP_3x3mm_P0.5mm_EP1.45x1.45mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-16-1EP_3x3mm_P0.5mm_EP1.7x1.7mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -8436,7 +8436,7 @@
 			(uuid "75a71837-b821-4703-9212-1dfb721cee7a")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_SON.3dshapes/Texas_DRC0010J.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_SON.3dshapes/VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -9824,7 +9824,7 @@
 			(uuid "051b9e7f-fa80-4b13-adaf-ecf2f2d46a84")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-16-1EP_3x3mm_P0.5mm_EP1.45x1.45mm.step"
+		(model "${KICAD9_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-16-1EP_3x3mm_P0.5mm_EP1.7x1.7mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
