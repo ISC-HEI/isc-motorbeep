@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "kicad": {
+      "command": "node",
+      "args": ["/home/pmudry/git/cad-demo/tools/kicad-mcp-server/dist/index.js"],
+      "env": {
+        "KICAD_PYTHON": "/home/pmudry/git/cad-demo/tools/kicad-mcp-server/.venv/bin/python",
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

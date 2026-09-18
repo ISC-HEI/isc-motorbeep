@@ -1,0 +1,3658 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid 019a7c46-9a1d-4d3a-a024-de2a074d05fe)
+	(paper "A4")
+	(title_block
+		(title "Motors — 2x STSPIN220 stepper driver")
+		(date "2026-09-18")
+		(rev "A")
+		(company "HES-SO Valais-Wallis - ISC")
+		(comment 1 "ESP32 dual-stepper + audio, 3xAA powered")
+		(comment 2 "Improved derivative of the ESP32 DevKit DOIT v1")
+	)
+	(lib_symbols
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Driver_Motor:STSPIN220"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -10.16 16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "STSPIN220"
+				(at 5.08 16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_DFN_QFN:VQFN-16-1EP_3x3mm_P0.5mm_EP1.8x1.8mm"
+				(at 5.08 19.05 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "www.st.com/resource/en/datasheet/stspin220.pdf"
+				(at 3.81 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Low voltage stepper motor driver, 1.8V to 10V input, 1.3Arms output, 0.4Ω Rdson per phase (typical), QFN-16 package"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "motor driver stepper"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "VQFN*1EP*3x3mm*P0.5mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "STSPIN220_0_1"
+				(rectangle
+					(start -10.16 15.24)
+					(end 12.7 -15.24)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "STSPIN220_1_1"
+				(pin input line
+					(at -12.7 12.7 0)
+					(length 2.54)
+					(name "DIR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 10.16 0)
+					(length 2.54)
+					(name "STCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 5.08 0)
+					(length 2.54)
+					(name "MODE1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 2.54 0)
+					(length 2.54)
+					(name "MODE2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -12.7 -2.54 0)
+					(length 2.54)
+					(name "EN/FLT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -5.08 0)
+					(length 2.54)
+					(name "STBY/RESET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -10.16 0)
+					(length 2.54)
+					(name "REF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -12.7 -12.7 0)
+					(length 2.54)
+					(name "TOFF"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 17.78 270)
+					(length 2.54)
+					(name "VS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -17.78 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -17.78 90)
+					(length 2.54)
+					(name "EPAD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 15.24 12.7 180)
+					(length 2.54)
+					(name "OUTA1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 15.24 10.16 180)
+					(length 2.54)
+					(name "OUTA2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 15.24 7.62 180)
+					(length 2.54)
+					(name "SENSEA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 15.24 0 180)
+					(length 2.54)
+					(name "OUTB1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 15.24 -2.54 180)
+					(length 2.54)
+					(name "OUTB2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 15.24 -5.08 180)
+					(length 2.54)
+					(name "SENSEB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector_Generic:Conn_01x04"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x04_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 25.4 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "493f877c-fcf6-4091-af5a-aadd1ef1690a")
+		(property "Reference" "R20"
+			(at 29.21 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "39k"
+			(at 29.21 26.669999999999998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 23.622 25.4 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 25.4 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "736a366a-a5cc-4b3a-9615-9077d142c04f")
+		)
+		(pin "2"
+			(uuid "24d660e1-22d0-486e-87ab-5970a4e1569a")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R20")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 45.72 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bc922ee8-b307-4b86-a5d0-6e7471a2b9bd")
+		(property "Reference" "R21"
+			(at 49.53 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 49.53 26.669999999999998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 43.942 25.4 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 45.72 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "31b11fc9-2b54-4440-8504-f993f76c3280")
+		)
+		(pin "2"
+			(uuid "96d2e955-df43-49fe-bae4-872776b1eb5c")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R21")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 66.04 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "822932c5-9714-4b31-8685-3a3284494115")
+		(property "Reference" "R22"
+			(at 69.85 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 69.85 26.669999999999998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 64.262 25.4 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 66.04 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "88d21c04-91a7-4380-826f-0b04a1f69bce")
+		)
+		(pin "2"
+			(uuid "1df6203d-a882-4697-9afa-a7e879dff5f2")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R22")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 86.36 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "977cb1ce-a9d7-46d1-aab7-207fd87ed9b9")
+		(property "Reference" "R23"
+			(at 90.17 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 90.17 26.669999999999998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 84.582 25.4 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 86.36 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5e255da4-f6ba-4304-9258-8210af859a25")
+		)
+		(pin "2"
+			(uuid "9cb36fd5-8e2c-4e18-b8b0-6e9866c56e60")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R23")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 106.68 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "75f66e11-5bf3-4ba9-b98a-4ef8807b9994")
+		(property "Reference" "R24"
+			(at 110.49 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 110.49 26.669999999999998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 104.902 25.4 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 106.68 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "124ced11-3740-40e9-ae3c-5721163c43e4")
+		)
+		(pin "2"
+			(uuid "8be19404-315a-4669-9efc-17260cecdc85")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R24")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 127 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6519a59d-5145-4d91-9f3e-4a0d603ab0f8")
+		(property "Reference" "C20"
+			(at 130.81 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 130.81 26.669999999999998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 127.965 21.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 127 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7d17b5f0-7b36-4227-8dce-9130cff482e9")
+		)
+		(pin "2"
+			(uuid "230fda0a-c3d4-4f9e-9006-50571004b511")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "C20")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 147.32 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ba41c04c-5f06-4c77-ab94-057702c14963")
+		(property "Reference" "C21"
+			(at 151.13 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47uF"
+			(at 151.13 26.669999999999998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+			(at 148.285 21.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 147.32 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f9dca0af-837a-48a9-9042-f63e43114140")
+		)
+		(pin "2"
+			(uuid "a4ecf660-edf1-4079-bed9-b0049df473c4")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "C21")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 167.64 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b06157b2-936e-412d-ac58-c178dfe1349e")
+		(property "Reference" "C22"
+			(at 171.45 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 171.45 26.669999999999998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 168.605 21.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 167.64 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a33d8613-c412-41e7-aeff-08b07f8fdd90")
+		)
+		(pin "2"
+			(uuid "4ef97b79-b6fd-43b7-8fa0-282d961978d4")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "C22")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "C22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 187.96 25.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7e7e32a0-f115-47eb-ab8b-28fc078f8b6d")
+		(property "Reference" "C23"
+			(at 191.77 25.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47uF"
+			(at 191.77 26.669999999999998 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+			(at 188.925 21.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 187.96 25.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a1a5d942-bce4-43e0-a3df-e2c4e6f34203")
+		)
+		(pin "2"
+			(uuid "25694f8a-fcf4-43b7-82df-e1aab262b36a")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "C23")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Driver_Motor:STSPIN220")
+		(at 88.9 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ed791859-8f04-4292-8764-480af38e901f")
+		(property "Reference" "U5"
+			(at 88.9 43.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "STSPIN220"
+			(at 88.9 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.45x1.45mm_ThermalVias"
+			(at 93.98 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "www.st.com/resource/en/datasheet/stspin220.pdf"
+			(at 92.71 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Low voltage stepper motor driver, 1.8V to 10V input, 1.3Arms output, 0.4Ω Rdson per phase (typical), QFN-16 package"
+			(at 88.9 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d023eb28-4590-4d47-bc9a-772734d2a8f4")
+		)
+		(pin "10"
+			(uuid "09227bff-9ec5-47ed-b4dc-b32a5c98882f")
+		)
+		(pin "11"
+			(uuid "ddbcf6a9-7eb8-4cba-ad1f-a5e6b2564983")
+		)
+		(pin "12"
+			(uuid "50ed06c2-1f37-47e9-b9d0-e662c9cdeff6")
+		)
+		(pin "13"
+			(uuid "1ddb89d5-fe0e-4209-8214-37961f5ae139")
+		)
+		(pin "14"
+			(uuid "3472127a-9b90-4824-a396-5b7def4acfbe")
+		)
+		(pin "15"
+			(uuid "f50bb169-eab9-46a4-b511-18cce82f4507")
+		)
+		(pin "16"
+			(uuid "51e14a8e-9b01-46c7-8dca-6e36592e2f9c")
+		)
+		(pin "17"
+			(uuid "8b8d6032-d793-43b0-a74d-43616e2d85be")
+		)
+		(pin "2"
+			(uuid "992f8b14-193c-48a3-bd9b-82d489a76daf")
+		)
+		(pin "3"
+			(uuid "ed5f012a-a311-4402-a5f3-a802288ee21c")
+		)
+		(pin "4"
+			(uuid "3311a686-01c8-45ae-bce6-f568474c8c2d")
+		)
+		(pin "5"
+			(uuid "ea6d411a-dafe-4900-8b77-84f98f21065b")
+		)
+		(pin "6"
+			(uuid "2f697fa1-2d59-43d2-8485-70cdf43ee8d3")
+		)
+		(pin "7"
+			(uuid "8dd3b043-1e6b-4788-8b55-513ff52c1ca5")
+		)
+		(pin "8"
+			(uuid "8d068a3e-a421-4b03-a46a-8c9b9d4fd6fa")
+		)
+		(pin "9"
+			(uuid "fadb626a-85b6-45b4-8094-aa0b1040e5f3")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "U5")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "U5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 25.4 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "432989ad-3e06-4ddc-939e-226c58c34b3c")
+		(property "Reference" "R30"
+			(at 29.21 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 29.21 62.230000000000004 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 23.622 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 25.4 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "df35e125-02e2-430c-9c75-ecfe90ff4737")
+		)
+		(pin "2"
+			(uuid "ffb90b93-d622-4680-b722-5c616f4bab9a")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R30")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 25.4 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f106b98e-030a-4147-907a-27a147f6ac90")
+		(property "Reference" "R31"
+			(at 29.21 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 29.21 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 23.622 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 25.4 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6591f186-207e-4738-b10f-87f81916da8a")
+		)
+		(pin "2"
+			(uuid "04567b72-46f9-4f29-85d9-694fc70422d8")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R31")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 25.4 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cd5292c2-1916-463f-9f55-f150f2bed762")
+		(property "Reference" "R32"
+			(at 29.21 101.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20k"
+			(at 29.21 102.86999999999999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 23.622 101.6 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 25.4 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "798d5b7e-e7b6-45a3-b8a5-6e6a8617765f")
+		)
+		(pin "2"
+			(uuid "ef0380f6-8a78-4714-9e17-53277f8d23a5")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R32")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 152.4 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fd5ff760-f992-40b0-a905-d5add8d74ebc")
+		(property "Reference" "R33"
+			(at 156.21 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.33"
+			(at 156.21 62.230000000000004 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 150.622 60.96 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 152.4 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9c484c50-d1e4-418a-830a-260308bfae9a")
+		)
+		(pin "2"
+			(uuid "a8885c8e-6bd5-43a0-8d9a-4d967b23bd9c")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R33")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 152.4 81.28 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72d63b92-ee84-4595-97ba-14cdfdf6ba8d")
+		(property "Reference" "R34"
+			(at 156.21 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.33"
+			(at 156.21 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 150.622 81.28 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 152.4 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c68d4de2-ac47-4b00-a2bf-802df910dd8e")
+		)
+		(pin "2"
+			(uuid "1a35f8d0-e2e6-4f02-9a4b-f103902111b7")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R34")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 203.2 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5d1e4c7e-0038-4f02-91a9-57aa4c36d8d4")
+		(property "Reference" "J3"
+			(at 203.2 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Stepper 1"
+			(at 203.2 64.77000000000001 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 203.2 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 203.2 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a743ba0f-7a44-4e0e-927a-f936d903cfcc")
+		)
+		(pin "2"
+			(uuid "b409fa95-f36f-4d14-aa15-d3443fe2000b")
+		)
+		(pin "3"
+			(uuid "10970c14-0029-4e34-96e3-8feaaf73a693")
+		)
+		(pin "4"
+			(uuid "d488508c-f7d9-407f-baa0-dc6d69282aae")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "J3")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Driver_Motor:STSPIN220")
+		(at 88.9 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4facb8f4-364f-4525-a022-c45811e67184")
+		(property "Reference" "U6"
+			(at 88.9 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "STSPIN220"
+			(at 88.9 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.45x1.45mm_ThermalVias"
+			(at 93.98 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "www.st.com/resource/en/datasheet/stspin220.pdf"
+			(at 92.71 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Low voltage stepper motor driver, 1.8V to 10V input, 1.3Arms output, 0.4Ω Rdson per phase (typical), QFN-16 package"
+			(at 88.9 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8160da67-2d72-4c10-a99e-8983cbf49ccd")
+		)
+		(pin "10"
+			(uuid "c6720c4f-6d3f-4e73-8bed-f452adc36d9d")
+		)
+		(pin "11"
+			(uuid "4587f298-4eb1-4af7-87a5-dc0498cbec27")
+		)
+		(pin "12"
+			(uuid "1cb2e2d8-3a67-490b-9a67-8419d5c2d113")
+		)
+		(pin "13"
+			(uuid "3668c2ea-d6e2-4445-8d1a-9b642a76b5da")
+		)
+		(pin "14"
+			(uuid "1352f760-32f6-4e6a-99aa-e34dbc0b7758")
+		)
+		(pin "15"
+			(uuid "8ccd7938-be2a-4dcc-87c9-67df254ca73c")
+		)
+		(pin "16"
+			(uuid "01edc178-c63f-40e2-8b6d-d735d3a2b2b6")
+		)
+		(pin "17"
+			(uuid "23188b8b-ebd1-4021-a1b3-c3260ad7fe47")
+		)
+		(pin "2"
+			(uuid "085f568d-4f80-4f09-9467-494569917496")
+		)
+		(pin "3"
+			(uuid "7d27690b-d914-43ff-af68-7422f8784c09")
+		)
+		(pin "4"
+			(uuid "1c3e9135-f94d-4c6a-a354-4d8cc0056ac5")
+		)
+		(pin "5"
+			(uuid "dd1a66f6-4de3-43da-b9ab-580fd35b3c31")
+		)
+		(pin "6"
+			(uuid "e6dd5ff9-bf5e-47d0-98b9-fc73ba5129b1")
+		)
+		(pin "7"
+			(uuid "d3c83c9a-3493-4424-a978-b499820e3013")
+		)
+		(pin "8"
+			(uuid "55a08a14-bf1b-4a53-8fdb-03f165a11cad")
+		)
+		(pin "9"
+			(uuid "1a3cdf88-34ec-4cba-a670-46884afc2bc6")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "U6")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 25.4 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "13b16a04-336d-4dfa-9219-f88dce798f7c")
+		(property "Reference" "R40"
+			(at 29.21 127.0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 29.21 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 23.622 127 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 25.4 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "077c3414-9b45-4933-9a42-25b2cd38d24e")
+		)
+		(pin "2"
+			(uuid "9e0c006e-3531-4ea8-a93f-36c4764519b3")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R40")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 25.4 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f3090d40-5bf6-4b51-a9b4-08226a746050")
+		(property "Reference" "R41"
+			(at 29.21 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 29.21 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 23.622 147.32 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 25.4 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "994ae579-334c-43a1-9fa8-04e13d9ff45f")
+		)
+		(pin "2"
+			(uuid "1f487528-c0a4-4654-be20-fb298ff1d229")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R41")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 25.4 167.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2807c05c-18ff-4453-893f-469aed4eefba")
+		(property "Reference" "R42"
+			(at 29.21 167.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "20k"
+			(at 29.21 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 23.622 167.64 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 25.4 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "596a3fa2-84c7-4c9f-9f8f-39f31291fa57")
+		)
+		(pin "2"
+			(uuid "cbe696ce-3e47-43dd-a2d2-26c4d613c3ab")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R42")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 152.4 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "767fd788-5d48-4e5f-abdb-514afbb067ae")
+		(property "Reference" "R43"
+			(at 156.21 127.0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.33"
+			(at 156.21 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 150.622 127 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 152.4 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "00861335-6764-4dd2-bb8b-588a0d63f43b")
+		)
+		(pin "2"
+			(uuid "0a2548b5-af46-4c12-b17e-f3f2918dc49d")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R43")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R43")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 152.4 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f6d0f415-edfb-4f8a-8794-bb7809f933b9")
+		(property "Reference" "R44"
+			(at 156.21 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.33"
+			(at 156.21 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 150.622 147.32 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 152.4 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6ae77f16-6053-483c-9328-b09714093bed")
+		)
+		(pin "2"
+			(uuid "dc974792-8613-4b2b-8326-96eb1ee38d02")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "R44")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "R44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 203.2 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b226f659-0169-418c-b931-2df3908838bb")
+		(property "Reference" "J4"
+			(at 203.2 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Stepper 2"
+			(at 203.2 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 203.2 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 203.2 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e9685bdd-0663-4ef6-ab22-82e966d9a8f5")
+		)
+		(pin "2"
+			(uuid "f957e343-1613-4db1-9bc8-619ed328065e")
+		)
+		(pin "3"
+			(uuid "46cbdf3f-147d-4635-9472-b1bc2de7a349")
+		)
+		(pin "4"
+			(uuid "a7dd7883-eb2d-45ad-8695-811393cfb336")
+		)
+		(instances
+			(project "isc-motorbeep"
+				(path "/019a7c46-9a1d-4d3a-a024-de2a074d05fe"
+					(reference "J4")
+					(unit 1)
+				)
+				(path "/8a54c92a-6588-4d68-ac6f-45498e2de791/ff23b397-aa12-4a67-b662-77a722c7d6ec"
+					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(global_label "+3V3"
+		(at 25.4 21.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "36aa4ba7-2dbc-42fc-8b66-298f4cc99a28")
+	)
+	(global_label "MOT_VREF"
+		(at 25.4 29.209999999999997 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "17d4e8e2-946e-465f-9bb1-7cbf952438eb")
+	)
+	(global_label "MOT_VREF"
+		(at 45.72 21.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "12d4fb14-7624-4661-8d13-db48ff4dc03a")
+	)
+	(global_label "GND"
+		(at 45.72 29.209999999999997 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c7b17280-8e16-4268-b111-379e2625bbbb")
+	)
+	(global_label "MOT_STBY"
+		(at 66.04 21.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "83f20718-9e77-4f10-82ef-f263ebbaa523")
+	)
+	(global_label "GND"
+		(at 66.04 29.209999999999997 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3a8e18ee-5dad-4eab-aa81-9ddc5960dd71")
+	)
+	(global_label "MODE1_S"
+		(at 86.36 21.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4e65a8d4-7808-4954-b568-4b6f1cdf0ea3")
+	)
+	(global_label "+3V3"
+		(at 86.36 29.209999999999997 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "28b9e7a1-af4d-413e-a8ca-2f75cf4cb161")
+	)
+	(global_label "MODE2_S"
+		(at 106.68 21.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8d3b9d45-91a1-4fdb-8f51-53736e36ebd4")
+	)
+	(global_label "GND"
+		(at 106.68 29.209999999999997 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b4dc05df-215a-4f22-84ad-da685da63a40")
+	)
+	(global_label "+BATT"
+		(at 127.0 21.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8ee83d85-ec57-4048-995f-4e0378fec40b")
+	)
+	(global_label "GND"
+		(at 127.0 29.209999999999997 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "1b90d36b-2fbb-47fc-854e-5f0da5ebdf16")
+	)
+	(global_label "+BATT"
+		(at 147.32 21.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d2029464-5fdb-49d1-b668-68a65c7c9160")
+	)
+	(global_label "GND"
+		(at 147.32 29.209999999999997 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f3a67afc-7a29-4123-a1f6-5d551698265a")
+	)
+	(global_label "+BATT"
+		(at 167.64 21.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b9cf4e7d-f664-4878-8ca3-1538be98bb1c")
+	)
+	(global_label "GND"
+		(at 167.64 29.209999999999997 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "cce1ef12-1aeb-467d-9351-ae970e94430f")
+	)
+	(global_label "+BATT"
+		(at 187.96 21.59 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bc2ce025-09a8-475a-bf4b-b064e9bdbc55")
+	)
+	(global_label "GND"
+		(at 187.96 29.209999999999997 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7f7042b4-1d81-496f-97b0-43e467bc0027")
+	)
+	(global_label "M1_DIR"
+		(at 76.2 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9ce66f6e-931d-4c8c-b50e-21cbe748c33e")
+	)
+	(global_label "M1_STCK"
+		(at 76.2 60.96000000000001 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ea09ab2a-d038-4483-a720-b7309718ae96")
+	)
+	(global_label "M1_A1"
+		(at 104.14 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a51a270e-9afe-4d63-8b43-3ed3a87f51d3")
+	)
+	(global_label "M1_SA"
+		(at 104.14 63.50000000000001 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8b1b28b3-f8d1-4d09-a834-d681c394871e")
+	)
+	(global_label "M1_A2"
+		(at 104.14 60.96000000000001 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "92afd2b5-31e0-45de-ba3e-ca2bbad83afd")
+	)
+	(global_label "+BATT"
+		(at 88.9 53.34 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "864f5a4c-68af-4707-b758-9b6e3e842c70")
+	)
+	(global_label "GND"
+		(at 88.9 88.9 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e4818318-1023-44a8-affb-0bad776d1c39")
+	)
+	(global_label "M1_B2"
+		(at 104.14 73.66000000000001 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "825e4f80-20ef-4c31-9040-400b07e9c32e")
+	)
+	(global_label "M1_SB"
+		(at 104.14 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ca94a60d-69f8-4180-abe8-4883afdf972c")
+	)
+	(global_label "M1_B1"
+		(at 104.14 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e0104457-17eb-46c0-9709-1cad85a0b4a7")
+	)
+	(global_label "MOT_VREF"
+		(at 76.2 81.28 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0cebbc09-c174-4ac7-8c77-e01a9465f7f6")
+	)
+	(global_label "M1_TOFF"
+		(at 76.2 83.82000000000001 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0b87c674-ae9d-4b78-a85f-cd5d0591da08")
+	)
+	(global_label "M1_ENP"
+		(at 76.2 73.66000000000001 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ad863075-a285-49ad-84ff-94ea4368a203")
+	)
+	(global_label "MOT_STBY"
+		(at 76.2 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "44873f29-f64d-4a20-9bb8-54181c5eee41")
+	)
+	(global_label "MODE2_S"
+		(at 76.2 68.58 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6effdf16-6d34-4564-a1ac-ca5d6fc16278")
+	)
+	(global_label "MODE1_S"
+		(at 76.2 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6cb479db-a295-42a5-aeb3-66a261eb7b77")
+	)
+	(global_label "GND"
+		(at 91.44000000000001 88.9 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "29bdbee8-ba40-4eb0-acf2-0680d2dc321f")
+	)
+	(global_label "M1_EN"
+		(at 25.4 57.15 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d19180e7-09b3-4c4f-a0b6-22cbaddc1c39")
+	)
+	(global_label "M1_ENP"
+		(at 25.4 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7e569c69-3d23-4806-8935-00683360cda8")
+	)
+	(global_label "M1_ENP"
+		(at 25.4 77.47 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3c6ddc18-9eb7-4006-a7e9-c73ce63b0135")
+	)
+	(global_label "GND"
+		(at 25.4 85.09 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5b5833d0-d46c-4ca8-88b3-f9a29ce2d079")
+	)
+	(global_label "M1_TOFF"
+		(at 25.4 97.78999999999999 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0b001a78-fab2-4cc9-819b-4adbb0f5861a")
+	)
+	(global_label "GND"
+		(at 25.4 105.41 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e751a05c-f16a-4ef2-b3b1-39ccd0591c4c")
+	)
+	(global_label "M1_SA"
+		(at 152.4 57.15 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "828bdac1-1edf-4161-8c8d-f53439f8d757")
+	)
+	(global_label "GND"
+		(at 152.4 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7e6f73c8-8054-4b9d-8626-dec7047745ed")
+	)
+	(global_label "M1_SB"
+		(at 152.4 77.47 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1a825edc-9856-4adc-b877-a9a9f7ddc65c")
+	)
+	(global_label "GND"
+		(at 152.4 85.09 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4b66d16c-962f-422a-af21-1d54ffe4bc1d")
+	)
+	(global_label "M1_A1"
+		(at 198.11999999999998 68.58 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "08e1551d-82d5-4d38-a20a-1a0f8720481d")
+	)
+	(global_label "M1_A2"
+		(at 198.11999999999998 71.12 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "80abb5c3-4b34-444b-b318-28297d9db34b")
+	)
+	(global_label "M1_B1"
+		(at 198.11999999999998 73.66000000000001 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "428287a2-a6a3-4acd-a074-9c39ed1f67b2")
+	)
+	(global_label "M1_B2"
+		(at 198.11999999999998 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3c305748-d956-4107-9f3f-649d1b9f148c")
+	)
+	(global_label "M2_DIR"
+		(at 76.2 124.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "823ef428-eac6-43e8-b09a-97e689a036e7")
+	)
+	(global_label "M2_STCK"
+		(at 76.2 127.0 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "eb8fe1f0-037d-4827-b7a1-076536ad6aa0")
+	)
+	(global_label "M2_A1"
+		(at 104.14 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a712e7e1-a46e-434c-95fd-ce9bd840ce84")
+	)
+	(global_label "M2_SA"
+		(at 104.14 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2e911d01-9993-40e1-befb-f6e5faf023a1")
+	)
+	(global_label "M2_A2"
+		(at 104.14 127.0 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1643ddef-31a0-499d-a386-b17aea48ebaf")
+	)
+	(global_label "+BATT"
+		(at 88.9 119.38 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c8d0f217-f2a1-4508-86d0-f2b166df233e")
+	)
+	(global_label "GND"
+		(at 88.9 154.94 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d9757789-dcef-4169-8c4f-871f35efae5f")
+	)
+	(global_label "M2_B2"
+		(at 104.14 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fa385f78-bba1-430e-8794-492ff8c76e46")
+	)
+	(global_label "M2_SB"
+		(at 104.14 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b5205720-1653-4b6d-9d30-13054484d205")
+	)
+	(global_label "M2_B1"
+		(at 104.14 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "42de3084-6696-4ef2-8d86-664274ffaeac")
+	)
+	(global_label "MOT_VREF"
+		(at 76.2 147.32 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e1feea8c-4a58-489c-84d2-e448911a0b47")
+	)
+	(global_label "M2_TOFF"
+		(at 76.2 149.85999999999999 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a16babd2-5559-4708-a000-0df5ebf6a844")
+	)
+	(global_label "M2_ENP"
+		(at 76.2 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8255fd89-d41e-4bf3-9f85-e8ef031d72c1")
+	)
+	(global_label "MOT_STBY"
+		(at 76.2 142.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f6b75537-72e0-4561-abca-597753f8e281")
+	)
+	(global_label "MODE2_S"
+		(at 76.2 134.62 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "49af61a8-43e6-4b61-b1ca-233454614749")
+	)
+	(global_label "MODE1_S"
+		(at 76.2 132.07999999999998 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dd91bfc1-dde6-4782-8690-164391b5de00")
+	)
+	(global_label "GND"
+		(at 91.44000000000001 154.94 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "000c14e6-187d-449c-82eb-a0ffed670486")
+	)
+	(global_label "M2_EN"
+		(at 25.4 123.19 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8530d3ed-e5f0-4060-9865-05d3064e8138")
+	)
+	(global_label "M2_ENP"
+		(at 25.4 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5fde4d18-0438-43aa-9f55-2b537e64d05a")
+	)
+	(global_label "M2_ENP"
+		(at 25.4 143.51 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1ee46f7e-2bd5-4a16-a815-69cf5e79d7f4")
+	)
+	(global_label "GND"
+		(at 25.4 151.13 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2f7f4083-8483-4bb8-ab4f-0d85c0f77711")
+	)
+	(global_label "M2_TOFF"
+		(at 25.4 163.82999999999998 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "843c3d64-6510-420d-8844-aa26f39ae0d0")
+	)
+	(global_label "GND"
+		(at 25.4 171.45 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "027a0dcd-8197-44af-af8a-30f12043b81b")
+	)
+	(global_label "M2_SA"
+		(at 152.4 123.19 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "645661e0-e274-4183-938d-9a313e02b26b")
+	)
+	(global_label "GND"
+		(at 152.4 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "34f87302-c0a9-48a8-b4ed-8bb827673407")
+	)
+	(global_label "M2_SB"
+		(at 152.4 143.51 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e6c2d637-a04c-4b7f-a980-a9a4a42759c3")
+	)
+	(global_label "GND"
+		(at 152.4 151.13 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b90b8a33-a3e0-4e67-996d-8b3584847ef5")
+	)
+	(global_label "M2_A1"
+		(at 198.11999999999998 134.62 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ed4dae9b-0dc1-45e0-9184-61a0a65a405a")
+	)
+	(global_label "M2_A2"
+		(at 198.11999999999998 137.16 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "526db430-8580-4566-b185-fd5418e233cf")
+	)
+	(global_label "M2_B1"
+		(at 198.11999999999998 139.7 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5fbea0d1-ed1f-497f-9963-34bae78d42bf")
+	)
+	(global_label "M2_B2"
+		(at 198.11999999999998 142.24 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8d78b874-df3c-46f5-9452-c7deda1caf08")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
