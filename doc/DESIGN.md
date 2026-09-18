@@ -32,8 +32,8 @@ the pack voltage will sag under each step. NiMH holds up far better.
 
     3xAA --> VBAT (2.8-4.8 V)
       |
-      +--> U4, U5  STSPIN220   VS   direct   (1.8-10 V range)   motors
-      +--> U6      MAX98357A   VDD  direct   (2.5-5.5 V range)  audio
+      +--> U5, U6  STSPIN220   VS   direct   (1.8-10 V range)   motors
+      +--> U7      MAX98357A   VDD  direct   (2.5-5.5 V range)  audio
       +--> U2      TPS63001 buck-boost -----> +3V3              ESP32 + logic
 
 One converter in the whole design. `TPS63001` is the fixed-3.3 V member of the
@@ -73,7 +73,7 @@ straight back into the pack. So:
 
 ## 3. Stepper drivers — STSPIN220
 
-**STSPIN220 x2** (U4, U5), QFN16 + exposed pad. Chosen because its supply range
+**STSPIN220 x2** (U5, U6), QFN16 + exposed pad. Chosen because its supply range
 starts at **1.8 V**: the usual A4988 / DRV8825 need 8 V and simply cannot run
 from a battery pack this size. STEP/DIR ("STCK"/"DIR") interface, microstepping
 to 1/256, integrated current control.
@@ -102,7 +102,7 @@ raising `STBY`, not after. This is the single easiest thing to get wrong.
 
 ## 4. Audio
 
-**MAX98357A** (U6): I2S digital input -> Class-D output, 2.0-5.5 V supply,
+**MAX98357A** (U7): I2S digital input -> Class-D output, 2.5-5.5 V supply,
 ~92% efficient, no separate DAC needed. Replaces the ESP32's own 8-bit DAC +
 analog amp: better SNR, and Class-D matters when the energy budget is 5 Wh.
 Runs directly from **VBAT**, `SD_MODE` gated by the ESP32 to mute/shutdown.
@@ -115,7 +115,7 @@ Runs directly from **VBAT**, `SD_MODE` gated by the ESP32 to mute/shutdown.
 | Thin bulk capacitance near module -> brownout on WiFi TX bursts | 22 uF bulk + 10 uF + 100 nF at the module, plus a 100 uF reservoir on +3V3 |
 | Micro-USB | USB-C receptacle, CC1/CC2 5.1k pulldowns |
 | CP2102 (old), no ESD protection on USB | CP2102N + USBLC6-2SC6 ESD array |
-| No reverse-polarity protection | P-MOSFET ideal diode (DMG2301L) |
+| No reverse-polarity protection | Schottky D2 in the battery leg (also the OR-ing diode) |
 | No battery sensing | divider on an **ADC1** pin, gated by a MOSFET so it draws nothing when idle |
 | ADC2 pins unusable while WiFi is on (silent trap) | all analog routed to ADC1 only |
 | Strapping pins exposed with no guidance | GPIO0/2/15 kept free of boot-breaking loads; **GPIO12 left NC** (anything on it risks a bad flash-voltage strap) |
@@ -207,9 +207,10 @@ Stated as checks, not as facts:
   deliver **0.5 A minimum** — this is a specified requirement, not an estimate.
   Confirm the buck-boost still delivers 0.5 A at 3.3 V from a nearly-flat pack;
   its 1.7 A switch rating suggests yes, but the low-Vin curve is the check.
-- **Reverse-polarity FET.** At 3xAA the worst-case gate drive is Vgs = -2.8 V
-  (against -2.0 V with 2 cells), comfortably inside the DMG2301L
-  characterisation — the 3-cell change resolves what was a real concern at 2.
+- **Reverse-polarity protection is the Schottky, not a FET.** The 2xAA draft
+  carried a P-MOSFET ideal diode; the built design does not, because D2 already
+  blocks reverse current and a FET behind it would add nothing but Rds(on). The
+  cost is D2's ~0.3 V drop, already accounted for above. No DMG2301L in the BOM.
 - **Logic-level abs-max on both loads.** The ESP32 drives 3.3 V logic into the
   STSPIN220 and MAX98357A while their own supply may be as low as 2.8 V. Both
   are believed to rate their digital inputs independently of VS (to ~5 V), but
@@ -219,18 +220,17 @@ Stated as checks, not as facts:
 - **ERC housekeeping:** `PWR_FLAG` on `VBAT` and `VBUS`, otherwise ERC reports
   "power pin not driven" on every rail. *(Done — root ERC is at 0 errors.)*
 
-### 8.6 Footprint caveats found while assigning packages
+### 8.6 Footprint notes
 
-Both are real and were found by checking, not assumed:
-
-- **USB-C J1 has no exact stock footprint.** The symbol
-  `USB_C_Receptacle_USB2.0_16P` exposes 11 pin numbers
-  (A1 A4 A5 A6 A7 A8 B5 B6 B7 B8 S1); every stock 16-pad Type-C footprint also
-  has A9/A12/B1/B4/B9/B12 for the duplicated VBUS and GND contacts. All 26
-  `USB_C_Receptacle_*` footprints were scanned — none matches the symbol
-  one-to-one. `USB_C_Receptacle_G-Switch_GT-USB-7010ASV` is assigned as the
-  physically correct 16-pad part, but **before layout** either tie the extra
-  VBUS/GND pads by hand or move to the 24P symbol + 24P footprint.
+- **USB-C J1 symbol and footprint do match.** An earlier revision of this
+  document claimed they did not. That was wrong: it came from a pin extractor
+  that silently truncated long symbol definitions and reported 11 of the 17
+  pins. `USB_C_Receptacle_USB2.0_16P` and
+  `USB_C_Receptacle_G-Switch_GT-USB-7010ASV` agree exactly - 17 pins, 17 pads,
+  no pad without a net (verified against the exported netlist, not the symbol
+  file). The same truncation bug also under-reported the ESP32 module as 29
+  pins instead of 39; that one was harmless because the missing pins were
+  duplicate GNDs and the module's own NC pins.
 - **QFN-16 exposed-pad size is provisional.** U5/U6 (STSPIN220) and U7
   (MAX98357A) are assigned
   `QFN-16-1EP_3x3mm_P0.5mm_EP1.45x1.45mm_ThermalVias`. The body and pitch are
