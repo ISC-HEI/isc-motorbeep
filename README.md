@@ -37,6 +37,17 @@ Four hierarchical sheets plus a root. Click any image for full resolution, or re
 
 [![Audio sheet](./doc/render/audio.png)](./doc/render/audio.png)
 
+## PCB
+
+Placed, not routed. 70 x 50 mm, 4 layers, 69 footprints, verified by
+[`tools/place_board.py`](./tools/place_board.py): no overlaps, nothing off-board, and nothing
+inside the ESP32 antenna keepout. The module's antenna deliberately overhangs the top edge, and
+L1 sits directly left of the TPS63001 so both switching nodes come out as 4.3 mm straight runs.
+
+[![PCB 3D view](./doc/render/pcb-3d-iso.png)](./doc/render/pcb-3d-iso.png)
+
+Routing is not done, so there are no tracks and no copper pours yet.
+
 ## Architecture
 
 Three AA cells deliver 2.8–4.8 V, and that range sits inside the supply window of both power loads —
