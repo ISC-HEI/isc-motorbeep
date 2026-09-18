@@ -12,6 +12,24 @@ stepper motors and a small speaker, powered from 3× AA cells. It is an improved
 ESP32 DevKit DOIT v1: the AMS1117 LDO, the thin bulk capacitance, the micro-USB connector and the
 absent battery sensing are all addressed.
 
+## The brief
+
+Take the [ESP32 DevKit DOIT v1](https://embedded-systems-design.github.io/overview-of-the-esp32-devkit-doit-v1/)
+as the reference design and produce an improved version of it that drives **two stepper motors** and
+a **small speaker**, running off **AA cells** — originally two, changed to three during the work.
+Deliver the complete schematic in KiCad (installing it as needed), authored through the
+[KiCAD-MCP-Server](https://github.com/mixelpixx/KiCAD-MCP-Server).
+
+## What was built
+
+1. KiCad 9 installed, the MCP server built, and patched — it emits the KiCad 10 file format, which 9 refuses to load.
+2. Architecture chosen from the battery up: 3× AA (2.8–4.8 V) sits inside the STSPIN220 and MAX98357A supply windows, so motors and audio need no converter; only the ESP32 does, and it must be a buck-boost.
+3. Parts picked against what KiCad actually ships — `DRV8834` and `TPS63020` have no stock symbols, so `STSPIN220` and `TPS63001` replaced them.
+4. Four hierarchical sheets authored headlessly: power, MCU, motors, audio. **Root ERC: 0 errors.**
+5. Verified three ways — ERC, a rendered image of every sheet reviewed by eye, and `check_nets.py`, which asserts 29 design-intent connections against the exported netlist.
+6. Footprints assigned and checked to exist, netlist and PDF exported, BOM priced against the real JLCPCB catalog (**$14.49**, part links in [`doc/BOM.md`](./doc/BOM.md)).
+7. A 4-layer PCB created and fully placed — antenna overhanging the edge, switching nodes 4.3 mm — then rendered in 3D. **Routing was not done.**
+
 ## Schematic
 
 Four hierarchical sheets plus a root. Click any image for full resolution, or read
